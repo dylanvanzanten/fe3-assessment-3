@@ -1,4 +1,4 @@
-# Assessment 2
+# Visualizing the amount of accidents with airline companies
 ![Final version](preview.png)
 
 ## ***Short description***
