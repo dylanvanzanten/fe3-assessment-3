@@ -1,4 +1,4 @@
-## ***Visualizing the amount of accidents with airline companies*** ✈️💥
+## ***Visualizing the amount of accidents with airliners*** ✈️💥
 ![Final version](preview.gif)
 
 ## ***Short description***
