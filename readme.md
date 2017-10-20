@@ -5,7 +5,7 @@
 Creating a interactive datavisualisation that visualizes the amount of incidents with airline companies.
 
 ## ***Background*** ℹ️
-This is assessement 3 of Frontend 3. I've made a D3 charts of visualsing the amount of incidents per airline between 1985 to 1999 and between 2000 and 2014. This assignment is made with __[D3]__(https://d3js.org/). I've chosen the __[Scatterplot]__(https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084) and a __[Pie chart]__(https://bl.ocks.org/santi698/f3685ca8a1a7f5be1967f39f367437c0) to visualise my data. The airlines are being displayed as dots on a line. The line has ticks that show the amount of incidents. When you click on a dot it opens a pie chart to show how much percentage incident was and hoe much percentage a fatal incident. You can also see the amount of fatalities.
+This is assessement 3 of Frontend 3. I've made a D3 charts of visualsing the amount of incidents per airline between 1985 to 1999 and between 2000 and 2014. This assignment is made with __[D3](https://d3js.org/)__. I've chosen the __[Scatterplot](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084)__ and a __[Pie chart](https://bl.ocks.org/santi698/f3685ca8a1a7f5be1967f39f367437c0)__ to visualise my data. The airlines are being displayed as dots on a line. The line has ticks that show the amount of incidents. When you click on a dot it opens a pie chart to show how much percentage incident was and hoe much percentage a fatal incident. You can also see the amount of fatalities.
 
 ## ***Workflow*** 💪
 * 🌬️ Clean, cleaning a bit of data and parsing the file to `.csv`.
@@ -136,7 +136,7 @@ So now it has a nice tooltip some animations and a ease! After that I made a tex
 
 4. Changing the code of the pie chart ⚒
 
-So next up was to use the pie chart to show the data that is inside the `incidentsOld`. First off I copied the files from the __[bl.ocks example]__(https://bl.ocks.org/mbostock/3887235) example. The example also loads in a `.csv` file to show of the data. Fortunatly the example has also already the colors that are being used. So I first went in to see if the pie chart worked. After that I changed the colors to three kinds:
+So next up was to use the pie chart to show the data that is inside the `incidentsOld`. First off I copied the files from the [bl.ocks](https://bl.ocks.org/mbostock/3887235) example. The example also loads in a `.csv` file to show of the data. Fortunatly the example has also already the colors that are being used. So I first went in to see if the pie chart worked. After that I changed the colors to three kinds:
 * Incidents with the color: #E67E22
 * Fatal incidents with the color: #E74C3C
 * Fatalities with the color: #C0392B
@@ -240,7 +240,7 @@ So the variabele is named incidents. It contains a name and a number. I harcoded
 
 So at the number I'm setting the `pieChartSelection` and I set the datapoint (ex: fatalities) to the number. So I can now give in the pie chart a return with d.number.
 
-Now I'm loading the data into the pie chart, but there is ofcourse a problem. How am I going to show the amount in or outside the pie chart? Well I've made a legend for the pie chart! The legend was a bit of a struggle, because everytime when I click it also has to be updated with the new data. I used a example for the legend from __[stackoverflow]__(https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart) The code of the legend you can see below:
+Now I'm loading the data into the pie chart, but there is ofcourse a problem. How am I going to show the amount in or outside the pie chart? Well I've made a legend for the pie chart! The legend was a bit of a struggle, because everytime when I click it also has to be updated with the new data. I used a example for the legend from [stackoverflow](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart) The code of the legend you can see below:
 ```javascript
     // How to add a nice legend to a d3 pie chart: https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart
     // Here we create a legend for the pie chart and load the data we are using in the pie chart also.
