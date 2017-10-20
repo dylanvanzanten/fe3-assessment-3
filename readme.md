@@ -8,11 +8,11 @@ Creating a interactive datavisualisation that visualizes the amount of incidents
 This is assessement 3 of Frontend 3. I've made a D3 charts of visualsing the amount of incidents per airline between 1985 to 1999 and between 2000 and 2014. This assignment is made with [D3](https://d3js.org/). I've chosen the [Scatterplot](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084) and a [Pie chart](https://bl.ocks.org/santi698/f3685ca8a1a7f5be1967f39f367437c0) to visualise my data. The airlines are being displayed as dots on a line. The line has ticks that show the amount of incidents. When you click on a dot it opens a pie chart to show how much percentage incident was and hoe much percentage a fatal incident. You can also see the amount of fatalities.
 
 ## ***Workflow***
-🌬️ Clean, cleaning a bit of data and parsing the file to `.csv`.
-⚒️ Transform, changing the examples to my code of view an load the data.
-📊 Display, displaying the data inside the chart(s).
-🎬 Interactive, make the chart(s) interactive with events.
-💡 Animate, make some elements look nicer.
+* 🌬️ Clean, cleaning a bit of data and parsing the file to `.csv`.
+* ⚒️ Transform, changing the examples to my code of view an load the data.
+* 📊 Display, displaying the data inside the chart(s).
+* 🎬 Interactive, make the chart(s) interactive with events.
+* 💡 Animate, make some elements look nicer.
 
 ### ***Data***
 The data I got from [fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/airline-safety). The data contains a couple of columns which you can see below:
@@ -36,14 +36,15 @@ After that I've made a directory with the following files:
 * `preview.png`
 
 2. Loading in the data 📡
+
 I downloaded the `.csv` file and then looked into the file. The file looked like this:
 
-| airline               | avail_seat_km_per_week | incidents_85_99    | fatal_accidents_85_99   | fatalities_85_99   |   | incidents_00_14   |   fatal_accidents_00_14   |    fatalities_00_14   |
-| --------------------- | ------------- | ------ | ------ | ------ | ------ | 
+| airline | avail_seat_km_per_week | incidents_85_99 | fatal_accidents_85_99 | fatalities_85_99 | incidents_00_14 | fatal_accidents_00_14 | fatalities_00_14 |
+| --------------------- | ------------- | ------ | ------ | ------ | ------ | ------ | ------ | 
 | Aer Lingus            | 320906734     | 2      | 0      | 0      | 0      | 0      | 0      | 
-| Aeroflot*             | 1197672318    | 76     | 14     | 128    | 6      | 1      | 88      |
+| Aeroflot*             | 1197672318    | 76     | 14     | 128    | 6      | 1      | 88     |
 | Aerolineas Argentinas | 385803648     | 6      | 0      | 0      | 1      | 0      | 0      |
-| Aeromexico*           | 596871813     | 3      | 1      | 64      | 5      | 0      | 0      |
+| Aeromexico*           | 596871813     | 3      | 1      | 64     | 5      | 0      | 0      |
 | Air Canada            | 1865253802    | 2      | 0      | 0      | 2      | 0      | 0      |
 
 You can see that some of the airlines have a `*` in there name. And also the `avail_seat_km_per_week` is not really relevant data for me, so I also removed that data. The file was already cleaned up, but I've made some changes in it. See below:
@@ -80,6 +81,7 @@ Now that I've cleaned up the data I went to map the data I want to use for the f
 I've mapped the data with names and set the number of the data to it. So I know which data I can use for the charts. `incidentsOld` has two data number combined to eachother, because I want to use that data onto the dots to show what the total incidents per aitline there are.
 
 3. Changing the code of the scatterplot  
+
 The scatterplot example I got has a Y-axis and a X-axis. I didn't needed a Y-axis because it was totally not relevant for my data. So I removed all the code that's relevant to the Y-axis and leaved all the code with the x-axis as it was.
 
 To the sctatterplot I selected a ID for it to place it on that position `#first-scatter-chart` is the name of the ID. After that I noticed the x-axis line has a fixed width. I want to get that line to the full width of the browser. I made a global variable for this named: `lineWidth`. Inside the `lineWidth` I set the `window.innerWidth`. Now the line goes the width of the size the browser is!
@@ -133,6 +135,7 @@ Now the line has a awesome animation when refreshing the page! But the dots are 
 So now it has a nice tooltip some animations and a ease! After that I made a text anchor to the chart to set the year  with an transition. I changed the font-sizes of it in CSS and renamed the font-family to `Roboto` and as a backup font: `Helvetica`.
 
 4. Changing the code of the pie chart ⚒
+
 So next up was to use the pie chart to show the data that is inside the `incidentsOld`. First off I copied the files from the [bl.ocks](https://bl.ocks.org/mbostock/3887235) example. The example also loads in a `.csv` file to show of the data. Fortunatly the example has also already the colors that are being used. So I first went in to see if the pie chart worked. After that I changed the colors to three kinds:
 * Incidents with the color: #E67E22
 * Fatal incidents with the color: #E74C3C
@@ -296,6 +299,7 @@ I appended these two things to the legend like so:
 I append a rectangle to the legend. In the rectangle I give it a attribute with a function inside it. The function gives the same return as the `.enter` for the pie chart: `return pieChartcolor`. I've added a i parameter to it so it knows that there are more rectangles. I changed the width and height of the rectangles and also changed the y-position of it. With the text I made a function that returns the data in one string. I needed a string because if I didn't Javascript is not happy with that and it also doens't work too. I changed the font-size of the text and changed the x and y position of the text also.
 
 5. Make de page look nice en slick 🤙
+
 So Now that I'm done with the interaction and animations I went to style a bit the page. I gave the page a background color and a header to give the page a more look and feel to it.
 
 ## ***Thoughts***
