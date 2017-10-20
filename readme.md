@@ -4,17 +4,17 @@
 ## ***Short description***
 Creating a interactive datavisualisation that visualizes the amount of incidents with airline companies.
 
-## ***Background***
+## ***Background*** ℹ️
 This is assessement 3 of Frontend 3. I've made a D3 charts of visualsing the amount of incidents per airline between 1985 to 1999 and between 2000 and 2014. This assignment is made with [D3](https://d3js.org/). I've chosen the [Scatterplot](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084) and a [Pie chart](https://bl.ocks.org/santi698/f3685ca8a1a7f5be1967f39f367437c0) to visualise my data. The airlines are being displayed as dots on a line. The line has ticks that show the amount of incidents. When you click on a dot it opens a pie chart to show how much percentage incident was and hoe much percentage a fatal incident. You can also see the amount of fatalities.
 
-## ***Workflow***
+## ***Workflow*** 💪
 * 🌬️ Clean, cleaning a bit of data and parsing the file to `.csv`.
 * ⚒️ Transform, changing the examples to my code of view an load the data.
 * 📊 Display, displaying the data inside the chart(s).
 * 🎬 Interactive, make the chart(s) interactive with events.
 * 💡 Animate, make some elements look nicer.
 
-### ***Data***
+### ***Data*** #️⃣
 The data I got from [fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/airline-safety). The data contains a couple of columns which you can see below:
 * Airlines, all the names of the airline company
 * Availible kilometers per week, the amount of kilometers per airline
@@ -25,7 +25,7 @@ The data I got from [fivethirtyeight](https://github.com/fivethirtyeight/data/tr
 * Fatal incidents 00-14, all incidents per airline between 2000 and 2014
 * Fatalities 00-14, all incidents per airline between 2000 and 2014
 
-### ***Steps***
+### ***Steps*** 🚶‍♂️
 1. copying the files from the scatterplot 📁
 
 After that I've made a directory with the following files:
@@ -302,10 +302,14 @@ I append a rectangle to the legend. In the rectangle I give it a attribute with 
 
 So Now that I'm done with the interaction and animations I went to style a bit the page. I gave the page a background color and a header to give the page a more look and feel to it.
 
-## ***Thoughts***
+## ***Thoughts*** 💭
 So this assessment went for me really good. I'm still struggling with Javascript. I'm better at reading Javascript than coding it 🙄. So I hope in the near future I can create alot more cool stuff with it. The D3 documentation was also quite hard to understand. It is alot of information about it.
 
 The subject frontend3 was an okay subject. The real problem was the time that you had to understand the D3 documentation. The time was for me also a stuggle, because I dind't have much time to understand it.
+
+## ***Things that can lift up the quality and usability*** 🏆
+* A select menu where you can choose per airline to only show that dot.
+* When the pie chart is being created I could have made a animation to it (I now only have a transition!)
 
 ## ***Features***
 * [D3](https://d3js.org/)
@@ -322,13 +326,15 @@ The subject frontend3 was an okay subject. The real problem was the time that yo
 ## ***Sources***
 * [Data from fivethirthyeight](https://github.com/fivethirtyeight/data/blob/master/airline-safety/airline-safety.csv)
 * [Author](https://b.locks.org/mbostock)
-* [Scatterplot](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084)
-* [Original Pie Chart](https://bl.ocks.org/mbostock/3887235)
+* [Scatterplot with v4](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084)
+* [Simple Pie Chart](https://bl.ocks.org/mbostock/3887235)
+* [Let's make a Pie Chart with D3.js](http://www.cagrimmett.com/til/2016/08/19/d3-pie-chart.html)
 * [Simple tooltip in d3.v4](https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73)
 * [Axis labels in d3.v4](https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e)
+* [D3js set x-axis tick position](https://stackoverflow.com/questions/43840134/d3js-set-x-axis-tick-position)
 * [Show/ hide elements on mouse click](http://bl.ocks.org/d3noob/5d621a60e2d1d02086bf)
 * [Add a transition to a D3 scatterplot](https://stackoverflow.com/questions/27950920/add-a-transition-to-a-d3j-scatter-plot)
-*  [How to add a nice legend to a d3 pie chart](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart)
+* [How to add a nice legend to a d3 pie chart](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart)
 
 ## ***License***
 All the rights go to [Mike Bostock](https://b.locks.org/mbostock) and [D3](https://d3js.org/). And also al rights to [@wooorm](https://github.com/wooorm) and [@Razpudding](https://github.com/Razpudding) for the example codes.
