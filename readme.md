@@ -1,5 +1,5 @@
 # ***Visualizing the amount of accidents with airline companies***
-![Final version](preview.png)
+![Final version](preview.gif)
 
 ## ***Short description***
 Creating a interactive datavisualisation that visualizes the amount of incidents with airline companies.
@@ -15,7 +15,7 @@ This is assessement 3 of Frontend 3. I've made a D3 charts of visualsing the amo
 * 💡 Animate, make some elements look nicer.
 
 ### ***Data*** #️⃣
-The data I got from __[fivethirtyeight]__(https://github.com/fivethirtyeight/data/tree/master/airline-safety). The data contains a couple of columns which you can see below:
+The data I got from __[fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/airline-safety)__. The data contains a couple of columns which you can see below:
 * Airlines, all the names of the airline company
 * Availible kilometers per week, the amount of kilometers per airline
 * Incidents 85-99, all incidents per airline between 1985 and 1999
@@ -77,6 +77,7 @@ Now that I've cleaned up the data I went to map the data I want to use for the f
         }
     }
 ```
+All this I got from the __[Cleaning example](https://cmda-fe3.github.io/course-17-18/class-3-clean/dylanvanzanten/)__ I made for Class 3 and Assessment 2.
 
 I've mapped the data with names and set the number of the data to it. So I know which data I can use for the charts. `incidentsOld` has two data number combined to eachother, because I want to use that data onto the dots to show what the total incidents per aitline there are.
 
@@ -88,7 +89,7 @@ To the sctatterplot I selected a ID for it to place it on that position `#first-
 
 My data contains 57 airlines, so all of them need different colors. So I was looking on the internet for coloring D3 and I've found the categorial colors from D3. Unfortunatly it only can go up to 20 colors. So that didn't worked very well. Then I've used the `d3.scaleOridal` with a `.range` to it. In the range I've put 57 hex colors (There is probably a nicer and cleaner solution, but I could not find it 😋).
 
-I've added to the chart a tooltip where inside the tooltip you can see the total amount of incidents. I've used a example from the [bl.ocks](https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73) to make a tooltip. The tooltip has a `mouseover` and a `mouseout` event. I gave to the tooltip a transition with a opacity form 0 to 1:
+I've added to the chart a tooltip where inside the tooltip you can see the total amount of incidents. I've used a example from the __[bl.ocks](https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73)__ to make a tooltip. The tooltip has a `mouseover` and a `mouseout` event. I gave to the tooltip a transition with a opacity form 0 to 1:
 ```javascript
     // Mouseover event where the tooltip is being added to the dots.
     // It has a transition on 0.2 seconds before it is being shown.        
@@ -136,7 +137,7 @@ So now it has a nice tooltip some animations and a ease! After that I made a tex
 
 4. Changing the code of the pie chart ⚒
 
-So next up was to use the pie chart to show the data that is inside the `incidentsOld`. First off I copied the files from the [bl.ocks](https://bl.ocks.org/mbostock/3887235) example. The example also loads in a `.csv` file to show of the data. Fortunatly the example has also already the colors that are being used. So I first went in to see if the pie chart worked. After that I changed the colors to three kinds:
+So next up was to use the pie chart to show the data that is inside the `incidentsOld`. First off I copied the files from the __[bl.ocks](https://bl.ocks.org/mbostock/3887235)__ example. The example also loads in a `.csv` file to show of the data. Fortunatly the example has also already the colors that are being used. So I first went in to see if the pie chart worked. After that I changed the colors to three kinds:
 * Incidents with the color: #E67E22
 * Fatal incidents with the color: #E74C3C
 * Fatalities with the color: #C0392B
@@ -240,7 +241,7 @@ So the variabele is named incidents. It contains a name and a number. I harcoded
 
 So at the number I'm setting the `pieChartSelection` and I set the datapoint (ex: fatalities) to the number. So I can now give in the pie chart a return with d.number.
 
-Now I'm loading the data into the pie chart, but there is ofcourse a problem. How am I going to show the amount in or outside the pie chart? Well I've made a legend for the pie chart! The legend was a bit of a struggle, because everytime when I click it also has to be updated with the new data. I used a example for the legend from [stackoverflow](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart) The code of the legend you can see below:
+Now I'm loading the data into the pie chart, but there is ofcourse a problem. How am I going to show the amount in or outside the pie chart? Well I've made a legend for the pie chart! The legend was a bit of a struggle, because everytime when I click it also has to be updated with the new data. I used a example for the legend from __[stackoverflow](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart)__ The code of the legend you can see below:
 ```javascript
     // How to add a nice legend to a d3 pie chart: https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart
     // Here we create a legend for the pie chart and load the data we are using in the pie chart also.
@@ -312,31 +313,32 @@ The subject frontend3 was an okay subject. The real problem was the time that yo
 * When the pie chart is being created I could have made a animation to it (I now only have a transition!)
 
 ## ***Features***
-* [D3](https://d3js.org/)
-* [D3 csv](https://github.com/d3/d3/wiki/CSV)
-* [D3 csvParseRows](https://github.com/d3/d3-dsv/blob/master/README.md#csvParseRows)
-* [D3 map](https://github.com/d3/d3-collection/blob/master/README.md#map) 
-* [D3 transition](https://github.com/d3/d3-transition/blob/master/README.md#transition)
-* [D3 select](https://github.com/d3/d3-selection/blob/master/README.md#select)
-* [D3 selectAll](https://github.com/d3/d3-selection/blob/master/README.md#selectAll)
-* [Selection append](https://github.com/d3/d3-selection/blob/master/README.md#selection_append)
-* [Selection attr](https://github.com/d3/d3-selection/blob/master/README.md#selection_attr)
-* [Selection enter](https://github.com/d3/d3-selection/blob/master/README.md#selection_enter)
+* __[D3](https://d3js.org/)__
+* __[D3 csv](https://github.com/d3/d3/wiki/CSV)__
+* __[D3 csvParseRows](https://github.com/d3/d3-dsv/blob/master/README.md#csvParseRows)__
+* __[D3 map](https://github.com/d3/d3-collection/blob/master/README.md#map)__ 
+* __[D3 transition](https://github.com/d3/d3-transition/blob/master/README.md#transition)__
+* __[D3 select](https://github.com/d3/d3-selection/blob/master/README.md#select)__
+* __[D3 selectAll](https://github.com/d3/d3-selection/blob/master/README.md#selectAll)__
+* __[Selection append](https://github.com/d3/d3-selection/blob/master/README.md#selection_append)__
+* __[Selection attr](https://github.com/d3/d3-selection/blob/master/README.md#selection_attr)__
+* __[Selection enter](https://github.com/d3/d3-selection/blob/master/README.md#selection_enter)__
 
 ## ***Sources***
-* [Data from fivethirthyeight](https://github.com/fivethirtyeight/data/blob/master/airline-safety/airline-safety.csv)
-* [Author](https://b.locks.org/mbostock)
-* [Scatterplot with v4](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084)
-* [Simple Pie Chart](https://bl.ocks.org/mbostock/3887235)
-* [Let's make a Pie Chart with D3.js](http://www.cagrimmett.com/til/2016/08/19/d3-pie-chart.html)
-* [Simple tooltip in d3.v4](https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73)
-* [Axis labels in d3.v4](https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e)
-* [D3js set x-axis tick position](https://stackoverflow.com/questions/43840134/d3js-set-x-axis-tick-position)
-* [Show/ hide elements on mouse click](http://bl.ocks.org/d3noob/5d621a60e2d1d02086bf)
-* [Add a transition to a D3 scatterplot](https://stackoverflow.com/questions/27950920/add-a-transition-to-a-d3j-scatter-plot)
-* [How to add a nice legend to a d3 pie chart](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart)
+* __[Data from fivethirthyeight](https://github.com/fivethirtyeight/data/blob/master/airline-safety/airline-safety.csv)__
+* __[Author](https://b.locks.org/mbostock)__
+* __[Scatterplot with v4](https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084)__
+* __[Simple Pie Chart](https://bl.ocks.org/mbostock/3887235)__
+* __[Let's make a Pie Chart with D3.js](http://www.cagrimmett.com/til/2016/08/19/d3-pie-chart.html)__
+* __[Simple tooltip in d3.v4](https://bl.ocks.org/d3noob/257c360b3650b9f0a52dd8257d7a2d73)__
+* __[Axis labels in d3.v4](https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e)__
+* __[D3js set x-axis tick position](https://stackoverflow.com/questions/43840134/d3js-set-x-axis-tick-position)__
+* __[Show/ hide elements on mouse click](http://bl.ocks.org/d3noob/5d621a60e2d1d02086bf)__
+* __[Add a transition to a D3 scatterplot](https://stackoverflow.com/questions/27950920/add-a-transition-to-a-d3j-scatter-plot)__
+* __[How to add a nice legend to a d3 pie chart](https://stackoverflow.com/questions/32298837/how-to-add-a-nice-legend-to-a-d3-pie-chart)__
+* __[Cleaning example](https://cmda-fe3.github.io/course-17-18/class-3-clean/dylanvanzanten/)__
 
 ## ***License***
-All the rights go to [Mike Bostock](https://b.locks.org/mbostock) and [D3](https://d3js.org/). And also al rights to [@wooorm](https://github.com/wooorm) and [@Razpudding](https://github.com/Razpudding) for the example codes.
+All the rights go to __[Mike Bostock](https://b.locks.org/mbostock)__ and __[D3](https://d3js.org/)__. And also al rights to __[@wooorm](https://github.com/wooorm)__ and __[@Razpudding](https://github.com/Razpudding)__ for the example codes.
 
 MIT © Dylan van Zanten
